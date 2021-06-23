@@ -8,8 +8,7 @@ right_wristX= 0;
 function setup(){
     video= createCapture(VIDEO);
     video.size(550, 500);
-    canvas= createCan
-    vas(550, 550);
+    canvas= createCanvas(550, 550);
     canvas.position(560, 150);
     postNet= ml5.postNet(video, modelLoaded);
     postNet.on('pose', gotPoses);
@@ -43,7 +42,7 @@ function gotPoses(results){
 function draw(){
     background('#7a95bf');
     document.getElementById("square_sides").innerHTML= "width and height of the square will be= " + difference + "px";
-    
+
     fill('#7a95bf');
     stroke('#7a95bf');
     square(noseX, noseY, difference);
